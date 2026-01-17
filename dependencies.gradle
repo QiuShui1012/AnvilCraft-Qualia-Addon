@@ -6,6 +6,11 @@ dependencies {
     implementation(libs.anvillib)
     interfaceInjectionData(libs.anvillib)
 
+    // JEI
+    compileOnlyApi(libs.jeiCommonApi) { transitive = false }
+    compileOnlyApi(libs.jeiForgeApi) { transitive = false }
+    implementation(libs.jeiForgeImpl) { transitive = false }
+
     // AnvilCraft
     implementation(libs.anvilcraft) { transitive = false }
     interfaceInjectionData(libs.anvilcraft) { transitive = false }

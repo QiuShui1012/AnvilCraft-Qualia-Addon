@@ -1,0 +1,33 @@
+{
+  "variants": {
+    "facing=south": {
+      "model": "anvilcraft_qualia:block/gas_collection_chamber",
+      "uvlock": true
+    },
+    "facing=west": {
+      "model": "anvilcraft_qualia:block/gas_collection_chamber",
+      "uvlock": true,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "anvilcraft_qualia:block/gas_collection_chamber",
+      "uvlock": true,
+      "y": 180
+    },
+    "facing=east": {
+      "model": "anvilcraft_qualia:block/gas_collection_chamber",
+      "uvlock": true,
+      "y": 270
+    },
+    "facing=up": {
+      "model": "anvilcraft_qualia:block/gas_collection_chamber",
+      "uvlock": true,
+      "x": 90
+    },
+    "facing=down": {
+      "model": "anvilcraft_qualia:block/gas_collection_chamber",
+      "uvlock": true,
+      "x": 270
+    }
+  }
+}
