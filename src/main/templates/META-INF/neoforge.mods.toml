@@ -76,7 +76,7 @@ side = "BOTH"
 modId = "anvilcraft"
 type = "required"
 versionRange = "[1.5.0,)"
-ordering = "NONE"
+ordering = "AFTER"
 side = "BOTH"
 
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares

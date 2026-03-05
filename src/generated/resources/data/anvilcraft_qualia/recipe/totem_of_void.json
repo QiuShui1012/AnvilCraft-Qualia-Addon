@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "anvilcraft:void_matter_block"
+    },
+    "M": {
+      "item": "anvilcraft:void_matter"
+    },
+    "T": {
+      "item": "minecraft:totem_of_undying"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "BTB",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "anvilcraft_qualia:totem_of_void"
+  }
+}

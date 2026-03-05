@@ -1,0 +1,62 @@
+package zh.qiushui.mod.aqa.item.tooltip;
+
+import com.google.common.collect.ImmutableMap;
+import com.google.common.collect.Maps;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import org.jetbrains.annotations.Unmodifiable;
+import zh.qiushui.mod.aqa.init.item.AqaItems;
+
+import java.util.List;
+import java.util.Map;
+
+public class ItemTooltipManager {
+    private static final Map<Item, String> NORMAL = Maps.newHashMap();
+    private static final Map<Item, String> SHIFT = Maps.newHashMap();
+
+    static {
+        SHIFT.put(AqaItems.TOTEM_OF_VOID.asItem(), "Triggers when falling into the Void. Grants Slow Falling effect with a long duration, and teleports to the scaled xz coordinates of the max build height in the Overworld");
+
+        ImmutableMap.Builder<Item, String> allTooltips = ImmutableMap.builder();
+        allTooltips.putAll(NORMAL);
+        allTooltips.putAll(SHIFT);
+        NEED_TOOLTIP_ITEM = allTooltips.build();
+    }
+
+    @Unmodifiable
+    public static final Map<Item, String> NEED_TOOLTIP_ITEM;
+
+    /**
+     * 为模组物品添加工具提示
+     *
+     * @param stack    需要添加工具提示的物品堆叠
+     * @param tooltips 提示内容
+     */
+    public static void addTooltip(ItemStack stack, List<Component> tooltips) {
+        Item item = stack.getItem();
+        if (NORMAL.containsKey(item)) {
+            tooltips.add(1, getItemTooltip(item));
+        }
+        if (SHIFT.containsKey(item)) {
+            if (Screen.hasShiftDown()) {
+                tooltips.add(1, getItemTooltip(item));
+            } else {
+                tooltips.add(1, Component.translatable("tooltip.anvilcraft.press_key", "Shift").withStyle(ChatFormatting.GRAY));
+            }
+        }
+    }
+
+    private static Component getItemTooltip(Item item) {
+        return Component.translatable(getTranslationKey(item)).withStyle(ChatFormatting.GRAY);
+    }
+
+    public static String getTranslationKey(Item item) {
+        ResourceLocation key = BuiltInRegistries.ITEM.getKey(item);
+        return "tooltip.%s.item.%s".formatted(key.getNamespace(), key.getPath());
+    }
+}

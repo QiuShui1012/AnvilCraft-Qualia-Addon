@@ -10,5 +10,6 @@ public class AqaLangHandler {
      */
     public static void init(RegistrateLangProvider provider) {
         ConfigLang.init(provider);
+        ItemTooltipLang.init(provider);
     }
 }

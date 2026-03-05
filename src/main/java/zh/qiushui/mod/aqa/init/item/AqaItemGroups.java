@@ -1,4 +1,4 @@
-package zh.qiushui.mod.aqa.init;
+package zh.qiushui.mod.aqa.init.item;
 
 import zh.qiushui.mod.aqa.AnvilCraftQualiaAddon;
 import dev.dubhe.anvilcraft.init.item.ModItemGroups;
@@ -10,7 +10,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import static zh.qiushui.mod.aqa.AnvilCraftQualiaAddon.REGISTRATE;
 
-
 public class AqaItemGroups {
     private static final DeferredRegister<CreativeModeTab> DEFERRED_REGISTER = DeferredRegister.create(
         Registries.CREATIVE_MODE_TAB,
@@ -20,7 +19,7 @@ public class AqaItemGroups {
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> AQA_ITEMS = DEFERRED_REGISTER.register(
         "addon_items",
         () -> CreativeModeTab.builder()
-            .icon(AqaBlocks.GAS_COLLECTION_CHAMBER::asStack)
+            .icon(AqaItems.TOTEM_OF_VOID::asStack)
             .displayItems((ctx, entries) -> {
             })
             .title(

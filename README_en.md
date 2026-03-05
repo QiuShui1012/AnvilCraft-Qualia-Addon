@@ -5,6 +5,6 @@ An addon for AnvilCraft, added something interesting.
 ---
 
 This addon added:
-- ~~Krypton, Xenon and their way to obtain~~ (WIP)
-- Gas Collection Chamber, ~~used to collect main/by-products of some Anvil Collision recipe~~ (WIP)
+- Totem of Void, will protect your life when falling into the Void
+- ~~Void Amulet, will protect your life when falling into the Void~~ (WIP)
 - And so on...
