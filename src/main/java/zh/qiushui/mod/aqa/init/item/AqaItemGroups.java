@@ -1,12 +1,12 @@
 package zh.qiushui.mod.aqa.init.item;
 
-import zh.qiushui.mod.aqa.AnvilCraftQualiaAddon;
 import dev.dubhe.anvilcraft.init.item.ModItemGroups;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
+import zh.qiushui.mod.aqa.AnvilCraftQualiaAddon;
 
 import static zh.qiushui.mod.aqa.AnvilCraftQualiaAddon.REGISTRATE;
 

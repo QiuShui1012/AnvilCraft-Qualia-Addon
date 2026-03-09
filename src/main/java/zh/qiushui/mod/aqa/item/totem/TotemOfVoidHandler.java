@@ -20,6 +20,8 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.EffectCures;
 import zh.qiushui.mod.aqa.init.item.AqaItems;
 
+import javax.annotation.Nullable;
+
 public class TotemOfVoidHandler implements TotemHandler {
     public static final TotemHandler INSTANCE = new TotemOfVoidHandler();
 
@@ -40,11 +42,21 @@ public class TotemOfVoidHandler implements TotemHandler {
         entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 900, 1));
         entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 100, 1));
         entity.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 800, 0));
-        entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 600, 0));
         entity.level().broadcastEntityEvent(entity, (byte) 38);
+        TotemOfVoidHandler.saveEntityFromVoid(entity, entity1 -> entity1.level().broadcastEntityEvent(entity1, (byte) 38));
+        return true;
+    }
+
+    @Override
+    public void shrink(ItemStack totem) {
+        totem.shrink(1);
+    }
+
+    public static void saveEntityFromVoid(LivingEntity entity, @Nullable DimensionTransition.PostDimensionTransition postTransition) {
+        entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 600, 0));
         MinecraftServer server = entity.getServer();
-        if (server == null) return true;
-        if (!entity.canChangeDimensions(entity.level(), server.overworld())) return true;
+        if (server == null) return;
+        if (!entity.canChangeDimensions(entity.level(), server.overworld())) return;
         Vec3 destPos = entity.position();
         if (entity.level().dimension() != Level.OVERWORLD) {
             double scale = DimensionType.getTeleportationScale(entity.level().dimensionType(), server.overworld().dimensionType());
@@ -56,13 +68,7 @@ public class TotemOfVoidHandler implements TotemHandler {
             Vec3.ZERO,
             90f,
             entity.getXRot(),
-            entity1 -> entity1.level().broadcastEntityEvent(entity1, (byte) 38)
+            postTransition == null ? a -> {} : postTransition
         ));
-        return true;
-    }
-
-    @Override
-    public void shrink(ItemStack totem) {
-        totem.shrink(1);
     }
 }

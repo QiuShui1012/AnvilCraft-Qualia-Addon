@@ -3,6 +3,8 @@
   "anvilcraft_qualia.configuration.section.anvilcraft_qualia.common.toml.title": "AnvilCraft: Qualia Addon通用配置",
   "anvilcraft_qualia.configuration.title": "AnvilCraft Qualia Addon配置",
   "item.anvilcraft_qualia.totem_of_void": "虚空图腾",
-  "tooltip.anvilcraft_qualia.item.totem_of_void": "掉入虚空中触发，触发后获得缓降状态效果和其它不死图腾相同的状态效果，并将触发者传送到主世界最大建造高度的对应xz坐标",
+  "item.anvilcraft_qualia.void_amulet": "虚空护符",
+  "tooltip.anvilcraft_qualia.item.totem_of_void": "掉入虚空中触发。\n触发后获得足以持续至落地的缓降状态效果，并将触发者传送到主世界最大建造高度的对应xz坐标",
+  "tooltip.anvilcraft_qualia.item.void_amulet": "生效时免疫虚空伤害。\n当掉入虚空时，持有者将会获得足以持续至落地的缓降状态效果，并将持有者传送到主世界最大建造高度的对应xz坐标",
   "itemGroup.anvilcraft_qualia.aqa_items": "AnvilCraft: Qualia Addon"
 }

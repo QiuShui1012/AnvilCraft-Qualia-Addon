@@ -20,7 +20,8 @@ public class ItemTooltipManager {
     private static final Map<Item, String> SHIFT = Maps.newHashMap();
 
     static {
-        SHIFT.put(AqaItems.TOTEM_OF_VOID.asItem(), "Triggers when falling into the Void. Grants Slow Falling effect with a long duration, and teleports to the scaled xz coordinates of the max build height in the Overworld");
+        SHIFT.put(AqaItems.VOID_AMULET.asItem(), "Grants immunity of void.\nWhen falling into the Void, grants long enough Slow Falling effect, and teleports to the scaled xz coordinates of the max build height in the Overworld");
+        SHIFT.put(AqaItems.TOTEM_OF_VOID.asItem(), "Triggers when falling into the Void. \nWhen trigger, grants long enough Slow Falling effect, and teleports to the scaled xz coordinates of the max build height in the Overworld");
 
         ImmutableMap.Builder<Item, String> allTooltips = ImmutableMap.builder();
         allTooltips.putAll(NORMAL);

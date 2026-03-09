@@ -8,11 +8,11 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.ItemLike;
-import zh.qiushui.mod.aqa.AnvilCraftQualiaAddon;
-import zh.qiushui.mod.aqa.data.lang.AqaLangHandler;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
+import zh.qiushui.mod.aqa.AnvilCraftQualiaAddon;
+import zh.qiushui.mod.aqa.data.lang.AqaLangHandler;
 
 import static zh.qiushui.mod.aqa.AnvilCraftQualiaAddon.REGISTRATE;
 

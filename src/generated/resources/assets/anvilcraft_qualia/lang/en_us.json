@@ -3,6 +3,8 @@
   "anvilcraft_qualia.configuration.section.anvilcraft_qualia.common.toml.title": "AnvilCraft: Qualia Addon Common Configuration",
   "anvilcraft_qualia.configuration.title": "AnvilCraft: Qualia Addon Configuration",
   "item.anvilcraft_qualia.totem_of_void": "Totem of Void",
+  "item.anvilcraft_qualia.void_amulet": "Void Amulet",
   "itemGroup.anvilcraft_qualia.aqa_items": "AnvilCraft: Qualia Addon",
-  "tooltip.anvilcraft_qualia.item.totem_of_void": "Triggers when falling into the Void. Grants Slow Falling effect with a long duration, and teleports to the scaled xz coordinates of the max build height in the Overworld"
+  "tooltip.anvilcraft_qualia.item.totem_of_void": "Triggers when falling into the Void. \nWhen trigger, grants long enough Slow Falling effect, and teleports to the scaled xz coordinates of the max build height in the Overworld",
+  "tooltip.anvilcraft_qualia.item.void_amulet": "Grants immunity of void.\nWhen falling into the Void, grants long enough Slow Falling effect, and teleports to the scaled xz coordinates of the max build height in the Overworld"
 }
